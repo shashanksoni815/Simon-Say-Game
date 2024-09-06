@@ -38,6 +38,7 @@ function levelUp() {
 }
 
 function btnPress() {
+    console.log(this);
     let btn = this;
     btnFlash(btn);
 }
