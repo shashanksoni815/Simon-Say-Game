@@ -32,6 +32,7 @@ function userFlash(btn) {
 }
 
 function levelUp() {
+    userSeq = [];
     level++;
     h2.innerText= `Level ${level}`;
 
@@ -58,6 +59,7 @@ function checkAns(idx) {
 
     } else {
         h2.innerText = `Game Over! Press any key to start.`;
+        reset();
     }
 }
 
@@ -75,4 +77,11 @@ function btnPress() {
 let allBtns = document.querySelectorAll(".btn");
 for (btn of allBtns) {
     btn.addEventListener("click", btnPress);
+}
+
+function reset () {
+    started = false;
+    gameSeq = [];
+    userSeq = [];
+    level = 0;
 }
