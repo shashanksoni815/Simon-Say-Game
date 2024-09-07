@@ -47,7 +47,14 @@ function levelUp() {
 }
 
 function checkAns() {
-    console.log("curr level : ", level);
+    // console.log("curr level : ", level);
+    let idx = level-1;
+
+    if (userSeq[idx] === gameSeq[idx]) {
+        console.log("same value");
+    } else {
+        h2.innerText = `Game Over! Press any key to start.`;
+    }
 }
 
 function btnPress() {
