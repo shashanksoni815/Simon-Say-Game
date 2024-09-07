@@ -43,7 +43,7 @@ function levelUp() {
     // console.log(randColor);
     // console.log(randBin);
     gameSeq.push(randColor);
-    console.log(gameSeq);
+    // console.log(gameSeq);
     gameFlash(randBin);
 }
 
@@ -58,13 +58,17 @@ function checkAns(idx) {
         }
 
     } else {
-        h2.innerText = `Game Over! Press any key to start.`;
+        h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br> Press any key to start.`;
+        document.querySelector("body").style.color = "red";
+        setTimeout(() => {
+            document.querySelector("body").style.color = "white";
+        }, 200);
         reset();
     }
 }
 
 function btnPress() {
-    console.log(this);
+    // console.log(this);
     let btn = this;
     userFlash(btn);
     
