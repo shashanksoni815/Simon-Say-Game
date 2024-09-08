@@ -35,15 +35,10 @@ function levelUp() {
     userSeq = [];
     level++;
     h2.innerText= `Level ${level}`;
-
     let randIdx = Math.floor(Math.random() * 3);
     let randColor = btns(randIdx);
     let randBin = document.querySelector(`.${randColor}`)
-    // console.log(randIdx);
-    // console.log(randColor);
-    // console.log(randBin);
     gameSeq.push(randColor);
-    // console.log(gameSeq);
     gameFlash(randBin);
 }
 
