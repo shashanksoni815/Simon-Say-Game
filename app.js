@@ -48,11 +48,7 @@ function levelUp() {
 }
 
 function checkAns(idx) {
-    // console.log("curr level : ", level);
-    // let idx = level-1;
-
     if (userSeq[idx] === gameSeq[idx]) {
-        // console.log("same value");
         if(userSeq.length == gameSeq.length) {
             setTimeout(levelUp, 1000); 
         }
